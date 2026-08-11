@@ -1,0 +1,40 @@
+name: Testing from live environment
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - '/tests/live/mock_api_tests/**'
+            - '/tests/live/regression/**'
+            - '/tests/live/sanity/**'
+
+    pull_request:
+        branches: [main]
+        paths:
+            - '/tests/live/mock_api_tests/**'
+            - '/tests/live/regression/**'
+            - '/tests/live/sanity/**'
+
+jobs:
+    run_tests:
+        runs-on: ubuntu
+        strategy:
+            matrix:
+                project-dir: [./tests/live/mock_api_tests/, ./tests/live/regression/, ./tests/live/sanity/]
+        
+        defaults:
+            run:
+                working-directory: ${{matrix.project-dir}}
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v4
+            - name: Setup node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '24'
+            
+            - name: Install dependencies
+              run: npm ci
+            - name: Execute specific-folder tests
+              run: npm test
+

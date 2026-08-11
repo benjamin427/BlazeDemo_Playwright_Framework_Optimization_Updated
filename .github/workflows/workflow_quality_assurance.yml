@@ -1,0 +1,37 @@
+name: Testing from quality assurance environment
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - '/tests/quality_assurance/mock_api_tests/**'
+            - '/tests/quality_assurance/regression/**'
+            - '/tests/quality_assurance/sanity/**'
+    pull_request:
+        branches: [main]
+        paths: 
+            - '/tests/quality_assurance/mock_api_tests/**'
+            - '/tests/quality_assurance/regression/**'
+            - '/tests/quality_assurance/sanity/**'
+
+jobs:
+    run_tests:
+        runs-on: ubuntu
+        strategy:
+            matrix:
+                project-dir: [./tests/quality_assurance/mock_api_tests/, ./tests/quality_assurance/regression/, ./tests/quality_assurance/sanity/]
+        defaults:
+            run:
+                working-directory: ${{matrix.project-dir}}
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v4
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '24'
+            
+            - name: Install dependencies
+              run: npm ci
+            - name: Execute specific-folder test
+              run: npm test
