@@ -1,0 +1,42 @@
+{
+  "dependencies": {
+    "chai": "^6.2.2",
+    "dotenv": "^17.4.2",
+    "mocha": "^11.3.0",
+    "playwright": "^1.62.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.2",
+    "winston": "^3.19.0"
+  },
+  "scripts": {
+    "chrome:test-suite:quality-assurance": "npx playwright test tests/quality_assurance --project=chromium",
+    "chrome:test:quality-assurance:smoke": "npx playwright test tests/quality_assurance/smoke --project=chromium",
+    "chrome:test:quality-assurance:sanity": "npx playwright test tests/quality_assurance/sanity --project=chromium",
+    "chrome:test:quality-assurance:regression": "npx playwright test tests/quality_assurance/regression --project=chromium",
+    "test:quality-assurance:api_tests": "npx playwright test tests/quality_assurance/mock_api_tests",
+    "chrome:test-suite:production": "npx playwright test tests/production --project=chromium",
+    "chrome:test:production:smoke": "npx plsywright test tests/production/smoke --project=chromium",
+    "chrome:test:production:sanity": "npx playwright test tests/production/sanity --project=chromium",
+    "chrome:test:production:regression": "npx playwright test tests/production/regression --project=chromium",
+    "test:production:api_tests": "npx playwright test tests/production/mock_api_tests",
+    "chrome:test-suite:live": "npx playwright test tests/live --project=chromium",
+    "chrome:test:live:smoke": "npx playwrighgt test tests/live/smoke --project=chromium",
+    "chrome:test:live:sanity": "npx playwright test tests/live/sanity --project=chromium",
+    "chrome:test:live:regression": "npx playwright test tests/live/regression --project=chromium",
+    "test:live:api_tests": "npx playwright test tests/live/mock_api_tests",
+    "firefox:test-suite:quality-assurance": "npx playwright test tests/quality_assurance --project=firefox",
+    "firefox:test:quality-assurance:smoke": "npx playwright test tests/quality_assurance/smoke --project=firefox",
+    "firefox:test:quality-assurance:sanity": "npx playwright test tests/quality_assurance/sanity --project=firefox",
+    "firefox:test:quality-assurance:regression": "npx playwright test tests/quality_assurance/regression --project=firefox",
+    "firefox:test-suite:production": "npx playwright test tests/production --project=firefox",
+    "firefox:test:production:smoke": "npx playwright test tests/production/smoke --project=firefox",
+    "firefox:test:production:sanity": "npx playwright test tests/production/sanity --project=firefox",
+    "firefox:test:production:regression": "npx playwright test tests/production/regression ---project=firefox",
+    "firefox:test-suite:live": "npx playwright test tests/live --project=firefox",
+    "firefox:test:live:smoke": "npx playwright test tests/live/smoke --project=firefox",
+    "firefox:test:live:sanity": "npx playwright test tests/live/sanity project=firefox",
+    "firefox:test:live:regression": "npx playwright test tests/live/regression --project=firefox"
+  }
+}
