@@ -1,0 +1,57 @@
+Start test execution initialization... [INFO] 2026-11-08 14:35:07
+Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-11-08 14:35:10
+Start test execution initialization... [INFO] 2026-11-08 14:35:10
+Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-11-08 14:35:13
+Starting test execution initialization... [INFO] 2026-11-08 14:35:14
+Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-11-08 14:35:15
+Start test execution initialization... [INFO] 2026-11-08 14:35:15
+Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-11-08 14:35:17
+Starting test execution initialization... [INFO] 2026-11-08 14:35:18
+Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-11-08 14:35:19
+Start test execution initialization... [INFO] 2026-11-08 14:35:19
+Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-11-08 14:35:22
+Starting test execution initialization... [INFO] 2026-11-08 14:35:23
+Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-11-08 14:35:23
+Start test execution initialization... [INFO] 2026-11-08 14:35:24
+Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-11-08 14:35:26
+Starting test execution initialization... [INFO] 2026-11-08 14:35:27
+Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-11-08 14:35:28
+Start test case initialization... [INFO] 2026-11-08 14:35:28
+Go to BlazeDemo.com/register website [INFO] 2026-11-08 14:35:28
+Verifying the url endpoint... [INFO] 2026-11-08 14:35:29
+Entering registration form... [INFO] 2026-11-08 14:35:29
+Clicking register button... [INFO] 2026-11-08 14:35:29
+Test complete with status: PASSED from step: Enter and submit registration form [INFO] 2026-11-08 14:35:30
+Starting test execution initialization... [INFO] 2026-11-08 14:35:30
+Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-11-08 14:35:31
+Start test execution initialization... [INFO] 2026-11-08 14:35:31
+Start mocking API requests for the third test case... [INFO] 2026-11-08 14:35:32
+Start assertions... [INFO] 2026-11-08 14:35:32
+Test complete with status: PASSED at step: Mock API request to find the name Are Lingus, flight number, and the time for departure and arrival in the menu [INFO] 2026-11-08 14:35:33
+Start test execution initialization... [INFO] 2026-11-08 14:35:33
+Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-11-08 14:35:34
+Start test execution initialization... [INFO] 2026-11-08 14:35:35
+Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-11-08 14:35:37
+Start test execution initialization... [INFO] 2026-11-08 14:35:37
+Test complete with status: PASSED at step: Submit registration form with special characters. Should display an error prompt message. [INFO] 2026-11-08 14:35:39
+Start test execution initialization... [INFO] 2026-11-08 14:35:39
+Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-11-08 14:35:41
+Starting test execution initialization... [INFO] 2026-11-08 14:35:42
+Test completed with status:  PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-11-08 14:35:43
+Start test case initialization... [INFO] 2026-11-08 14:35:43
+Go to BlazeDemo.com/register website [INFO] 2026-11-08 14:35:43
+Verifying the url endpoint... [INFO] 2026-11-08 14:35:44
+Entering registration form... [INFO] 2026-11-08 14:35:44
+Clicking register button... [INFO] 2026-11-08 14:35:44
+Test complete with status: PASSED from step: Enter and submit registration form [INFO] 2026-11-08 14:35:45
+11-08 14:35:40
+Starting test execution initialization... [INFO] 2026-11-08 14:35:41
+Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-11-08 14:35:42
+Starting test execution initialization... [INFO] 2026-11-08 14:35:42
+Test is complete with status: PASSED at step: Go to login website and enter login credentials [INFO] 2026-11-08 14:35:44
+tion to get flight information [INFO] 2026-11-08 14:35:42
+Starting test execution initialization... [INFO] 2026-11-08 14:35:43
+Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-11-08 14:35:44
+026-11-08 14:35:43
+Starting test execution initialization... [INFO] 2026-11-08 14:35:43
+Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-11-08 14:35:44
