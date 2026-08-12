@@ -1,6 +1,6 @@
-import {blazedemo_menuSelectDeparture} from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/smoke/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
-import {blazedemo_menuSelectDestination} from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/smoke/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
-import {blazedemo_reserve_flights} from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/smoke/pageObjects/flight_purchase_verification/flight_purchase_verification'
+import {blazedemo_menuSelectDeparture} from '../../../environments/live/smoke/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
+import {blazedemo_menuSelectDestination} from '../../../environments/live/smoke/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
+import {blazedemo_reserve_flights} from '../../../environments/live/smoke/pageObjects/flight_purchase_verification/flight_purchase_verification'
 import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 

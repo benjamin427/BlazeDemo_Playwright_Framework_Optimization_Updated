@@ -1,6 +1,6 @@
-import { blazedemo_reserve_flights } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/sanity/pageObjects/flight_purchase_verification/flight_purchase_verification'
-import { blazedemo_purchaseForm } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/sanity/pageObjects/purchaseForm/purchaseForm'
-import {blazedemo_menuSelectDeparture, blazedemo_menuSelectDestination } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/sanity/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
+import { blazedemo_reserve_flights } from '../../../../environments/quality_assurance/regression/pageObjects/flight_purchase_verification/flight_purchase_verification'
+import { blazedemo_purchaseForm } from '../../../../environments/quality_assurance/regression/pageObjects/purchaseForm/purchaseForm'
+import {blazedemo_menuSelectDeparture, blazedemo_menuSelectDestination } from '../../../../environments/quality_assurance/regression/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
 import {test, expect} from '@playwright/test'
 import logger from '../../../../utils/logger'
 
@@ -31,11 +31,10 @@ test('Select city to depart and the destination city and purchase airline servic
     await purchaseVirginAmerica.enterPurchaseForm_State(purchaseFormSpecialCharacters)
     await purchaseVirginAmerica.enterPurchaseForm_ZipCode(purchaseFormSpecialCharacters)
     await purchaseVirginAmerica.selectPurchaseForm_CardType_DinersClub()
-    await purchaseVirginAmerica.enterCreditCardNumber(purchaseFormSpecialCharacters)
-    await purchaseVirginAmerica.enterCreditCardMonth(purchaseFormSpecialCharacters)
-    await purchaseVirginAmerica.enterCreditCardYear(purchaseFormSpecialCharacters)
-    await purchaseVirginAmerica.enterCreditCardNameOnCard(purchaseFormSpecialCharacters)
-    await purchaseVirginAmerica.clickRememberMeCheckbox()
+    await purchaseVirginAmerica.enterPurchaseForm_CreditCardNumber(purchaseFormSpecialCharacters)
+    await purchaseVirginAmerica.enterPurchaseForm_CreditCardMonth(purchaseFormSpecialCharacters)
+    await purchaseVirginAmerica.enterPurchaseForm_NameOnCard(purchaseFormSpecialCharacters)
+    await purchaseVirginAmerica.clickPurchaseFlight()
 })
 
 test.afterEach(async({page}, testInfo) => {
@@ -47,6 +46,4 @@ test.afterEach(async({page}, testInfo) => {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
 })
-
-
 

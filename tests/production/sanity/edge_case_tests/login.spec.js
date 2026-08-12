@@ -1,4 +1,4 @@
-import {blazedemo_Login} from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/quality_assurance/sanity/pageObjects/login/login'
+import {blazedemo_Login} from '../../../../environments/production/sanity/pageObjects/login/login'
 import {test, expect} from '@playwright/test'
 import logger from '../../../../utils/logger'
 
