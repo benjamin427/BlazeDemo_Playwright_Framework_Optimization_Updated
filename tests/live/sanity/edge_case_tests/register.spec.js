@@ -1,4 +1,4 @@
-import {blazedemo_register} from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/live/sanity/pageObjects/register/register'
+import {blazedemo_register} from '../../../../environments/live/sanity/pageObjects/register/register'
 import {test, expect} from '@playwright/test'
 import logger from '../../../../utils/logger'
 
