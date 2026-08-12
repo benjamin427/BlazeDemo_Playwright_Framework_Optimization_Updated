@@ -1,7 +1,8 @@
 exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
     constructor(page){
         this.page = page
-        this.name = page.getByRole('textbox', {name: 'Name'})
+        this.name = page.locator('[name="inputName"]')
+        // this.name = page.getByRole('textbox', {name: 'Name'})
         this.address = page.getByRole('textbox', {name: 'Address'})
         this.city = page.getByRole('textbox', {name: 'City'})
         this.state = page.getByRole('textbox', {name: 'State'})
@@ -12,7 +13,7 @@ exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
         this.creditcard_year = page.getByRole('textbox', {name: 'Year'})
         this.creditcard_nameoncard = page.getByRole('textbox', {name: 'Name on Card'})
         this.buttonPurchaseFlight = page.getByRole('button', {name: 'Purchase Flight'})
-        this.checkboxRememberMe = page.getByLabel('Remember Me')
+        this.checkboxRememberMe = page.locator('[name="rememberMe"]')
     }
 
     async visitWebsite(){

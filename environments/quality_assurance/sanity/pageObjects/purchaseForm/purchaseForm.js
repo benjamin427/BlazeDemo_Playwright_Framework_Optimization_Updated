@@ -1,8 +1,8 @@
 exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
     constructor(page){
         this.page = page
-        this.name = page.getByRole('textbox', {name: 'Name', exact: true})
-        // this.name = page.locator('#inputName')
+        this.name = page.locator('[name="inputName"]')
+        // this.name = page.getByRole('textbox', {name: 'Name'})
         this.address = page.getByRole('textbox', {name: 'Address'})
         this.city = page.getByRole('textbox', {name: 'City'})
         this.state = page.getByRole('textbox', {name: 'State'})
@@ -13,7 +13,7 @@ exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
         this.creditcard_year = page.getByRole('textbox', {name: 'Year'})
         this.creditcard_nameoncard = page.getByRole('textbox', {name: 'Name on Card'})
         this.buttonPurchaseFlight = page.getByRole('button', {name: 'Purchase Flight'})
-        this.checkboxRememberMe = page.getByLabel('Remember Me')
+        this.checkboxRememberMe = page.locator('[name="rememberMe"]')
     }
 
     async visitWebsite(){
@@ -43,17 +43,14 @@ exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
     async selectPurchaseForm_CardType_DinersClub(){
         await this.cardtype.selectOption("Diner's Club")
     }
-    async enterCreditCardNumber(cc_number){
+    async enterPurchaseForm_CreditCardNumber(cc_number){
         await this.creditcardnumber.fill(cc_number)
     }
-    async enterCreditCardMonth(cc_month){
+    async enterPurchaseForm_CreditCardMonth(cc_month){
         await this.creditcard_month.fill(cc_month)
     }
-    async enterCreditCardYear(cc_year){
-        await this.creditcard_year.fill(cc_year)
-    }
-    async enterCreditCardNameOnCard(cc_name){
-        await this.creditcard_nameoncard.fill(cc_name)
+    async enterPurchaseForm_NameOnCard(name_on_card){
+        await this.creditcard_nameoncard.fill(name_on_card)
     }
     async clickPurchaseFlight(){
         await this.buttonPurchaseFlight.click()
