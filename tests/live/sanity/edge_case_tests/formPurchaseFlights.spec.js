@@ -1,6 +1,6 @@
-import { blazedemo_reserve_flights } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/live/sanity/pageObjects/flight_purchase_verification/flight_purchase_verification'
-import { blazedemo_purchaseForm } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/live/sanity/pageObjects/purchaseForm/purchaseForm'
-import {blazedemo_menuSelectDeparture, blazedemo_menuSelectDestination } from '/Users/Shado/Documents/BlazeDemo_Playwright_Updated/environments/live/sanity/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
+import { blazedemo_reserve_flights } from '../../../../environments/live/sanity/pageObjects/flight_purchase_verification/flight_purchase_verification'
+import { blazedemo_purchaseForm } from '../../../../environments/live/sanity/pageObjects/purchaseForm/purchaseForm'
+import {blazedemo_menuSelectDeparture, blazedemo_menuSelectDestination } from '../../../../environments/live/sanity/pageObjects/menu_departure_destination_city/menu_departure_destination_city'
 import {test, expect} from '@playwright/test'
 import logger from '../../../../utils/logger'
 
