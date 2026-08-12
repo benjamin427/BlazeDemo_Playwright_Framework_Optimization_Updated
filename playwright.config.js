@@ -16,6 +16,10 @@ import path from 'path'
  */
 export default defineConfig({
   globalTimeout: 600000,
+  timeout: 90000,
+  expect: {
+    timeout: 15000
+  },
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -30,6 +34,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     actionTimeout: 85000,
+    navigationTimeout: 20000,
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'https://blazedemo.com',
 
