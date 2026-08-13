@@ -25,4 +25,8 @@ exports.blazedemo_register = class BlazeDemo_Register {
         await this.registerButton.click()
     }
 
+    async closeBrowser(){
+        await this.page.close()
+    }
+
 }

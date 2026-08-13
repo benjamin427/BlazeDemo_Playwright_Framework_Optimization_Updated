@@ -8,9 +8,8 @@ exports.blazedemo_register = class BlazeDemo_Register {
         this.passwordConfirm = page.getByRole('textbox', {name: 'Confirm Password'})
         this.registerButton = page.getByRole('button', {name: 'Register'})
     }
-
     async visitWebsite(){
-        await this.page.goto('https:///blazedemo.com/register')
+        await this.page.goto('https://blazedemo.com/register')
     }
 
     async enterRegisterForm(name, company, email_address, password, confirm_password){

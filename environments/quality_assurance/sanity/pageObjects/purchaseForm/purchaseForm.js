@@ -2,7 +2,6 @@ exports.blazedemo_purchaseForm = class BlazeDemo_PurchaseForm {
     constructor(page){
         this.page = page
         this.name = page.locator('[name="inputName"]')
-        // this.name = page.getByRole('textbox', {name: 'Name'})
         this.address = page.getByRole('textbox', {name: 'Address'})
         this.city = page.getByRole('textbox', {name: 'City'})
         this.state = page.getByRole('textbox', {name: 'State'})
