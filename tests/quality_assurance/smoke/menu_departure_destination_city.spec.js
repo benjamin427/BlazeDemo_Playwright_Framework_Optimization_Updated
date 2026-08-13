@@ -37,5 +37,4 @@ test.afterEach(async({page}, testInfo) => {
     } else {
         logger.info(`Test completed with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
-    
 })

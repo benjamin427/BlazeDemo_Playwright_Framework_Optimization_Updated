@@ -44,11 +44,11 @@ test("Select city for departure and destination to make a purchase for United Ai
 
 test.afterEach(async({page}, testInfo) => {
     const destination = new blazedemo_menuSelectDestination(page)
-    await destination.closeBrowser()
     // Verify the status of test results
     if (testInfo.status === 'failed'){
         logger.error(`Test has failed in step: "${testInfo.title}"`)
     } else {
         logger.info(`Test completed with status:  ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
+    await destination.closeBrowser()
 })

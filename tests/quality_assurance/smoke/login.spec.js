@@ -2,6 +2,7 @@ import {blazedemo_Login} from '../../../environments/quality_assurance/smoke/pag
 import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 
+
 test('Go to login website and enter login credentials', async({page}, testInfo) => {
     const login = new blazedemo_Login(page)
     const referenceEmailAddress = process.env.BLAZEDEMO_LOGIN_EMAIL_ADDRESS

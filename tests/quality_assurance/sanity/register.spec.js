@@ -2,7 +2,6 @@ import {blazedemo_register} from '../../../environments/quality_assurance/sanity
 import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 
-
 test('Enter and submit registration form', async({page}, testInfo) => {
     const register = new blazedemo_register(page)
     const referenceName = process.env.BLAZEDEMO_REGISTER_NAME

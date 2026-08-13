@@ -39,11 +39,11 @@ test('Select city to depart and the destination city and purchase airline servic
 
 test.afterEach(async({page}, testInfo) => {
     const close = new blazedemo_menuSelectDestination(page)
-    await close.closeBrowser()
     if (testInfo.status === 'failed') {
         logger.error(`Test failed at step: "${testInfo.title}"`)
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
+    await close.closeBrowser()
 })
 

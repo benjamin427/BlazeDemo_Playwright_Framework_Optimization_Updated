@@ -126,6 +126,7 @@ test('Mock API request to find the name Are Lingus, flight number, and the time 
 
     await page.goto("https://blazedemo.com/reserve.php")
 
+    
     logger.info('Start assertions...')
     await expect(page.getByText('9696')).toBeVisible()
     await expect(page.getByText('Aer Lingus')).toBeVisible()

@@ -3,6 +3,7 @@ import {blazedemo_menuSelectDestination} from '../../../environments/quality_ass
 import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 
+
 test.beforeEach(async({page}) => {
     const departures = new blazedemo_menuSelectDeparture(page)
     logger.info('Starting test execution initialization...')
