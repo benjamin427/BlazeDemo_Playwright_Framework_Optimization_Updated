@@ -1,3 +1,6 @@
+** Work in progress **
+
+
 Installation:
 
 Go to nodejs website to download the current version of nodejs to use Playwright and follow the installation steps. To verify that nodejs has been installed, go to your terminal and type the command "node --version" and also type the node package command "npm --version"
