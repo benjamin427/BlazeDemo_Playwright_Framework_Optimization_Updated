@@ -1,49 +1,56 @@
-Start test execution initialization... [INFO] 2026-13-08 20:52:08
-Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-13-08 20:52:11
-Starting test execution initialization... [INFO] 2026-13-08 20:52:12
-Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-13-08 20:52:13
-Start test execution initialization... [INFO] 2026-13-08 20:52:13
-Test complete with status: PASSED at step: Enter random text into textfield for email address and password field. Should displlay an error prompt message [INFO] 2026-13-08 20:52:15
-Start test execution initialization... [INFO] 2026-13-08 20:52:15
-Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-13-08 20:52:19
-Start test execution initialization... [INFO] 2026-13-08 20:52:19
-Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-13-08 20:52:21
-Starting test execution initialization... [INFO] 2026-13-08 20:52:21
-Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-13-08 20:52:23
-Start test execution initialization... [INFO] 2026-13-08 20:52:23
-Start mocking API requests for the third test case... [INFO] 2026-13-08 20:52:23
-Start assertions... [INFO] 2026-13-08 20:52:24
-Test complete with status: PASSED at step: Mock API request to find the name Are Lingus, flight number, and the time for departure and arrival in the menu [INFO] 2026-13-08 20:52:24
-Start test execution initialization... [INFO] 2026-13-08 20:52:25
-Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-13-08 20:52:26
-Starting test execution initialization... [INFO] 2026-13-08 20:52:27
-Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-13-08 20:52:30
-Start test execution initialization... [INFO] 2026-13-08 20:52:30
-Test complete with status: PASSED at step: Enter random text into textfield for email address and password field. Should displlay an error prompt message [INFO] 2026-13-08 20:52:32
-Start test execution initialization... [INFO] 2026-13-08 20:52:33
-Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-13-08 20:52:36
-Start test execution initialization... [INFO] 2026-13-08 20:52:37
-Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-13-08 20:52:39
-Starting test execution initialization... [INFO] 2026-13-08 20:52:39
-Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-13-08 20:52:42
-Start test execution initialization... [INFO] 2026-13-08 20:52:42
-Start mocking API test for the second test case... [INFO] 2026-13-08 20:52:42
-Start assertions... [INFO] 2026-13-08 20:52:43
-Test complete with status: PASSED at step: Mock API request to find the name United Airlines, flight number, and the time for departurre and arrival in the menu [INFO] 2026-13-08 20:52:43
-Start test execution initialization... [INFO] 2026-13-08 20:52:43
-Test complete with status: PASSED at step: Submit registration form with special characters. Should display an error prompt message. [INFO] 2026-13-08 20:52:46
-Start test execution initialization... [INFO] 2026-13-08 20:52:46
-Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form to purchase flight ticket [INFO] 2026-13-08 20:52:49
-Start test execution initialization... [INFO] 2026-13-08 20:52:49
-Test complete with status: PASSED at step: Enter random text into textfield for email address Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form witTest complete with status: PASSED at step: Submit registration form with special characters. Should display an error prompt message. [INFO] 2026-13-08 20:Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form to purchase flight ticket [INFO] 2026-13-08 20:52:57
-Starting test execution initialization... [INFO] 2026-13-08 20:52:59
-Test completed with status:  PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-13-08 20:53:00
-Start test case initialization... [INFO] 2026-13-08 20:53:01
-Go to BlazeDemo.com/register website [INFO] 2026-13-08 20:53:01
-Verifying the url endpoint... [INFO] 2026-13-08 20:53:02
-Entering registration form... [INFO] 2026-13-08 20:53:02
-Clicking register button... [INFO] 2026-13-08 20:53:02
-Test complete with status: PASSED from step: Enter and submit registration form [INFO] 2026-13-08 20:53:02
-p: Select city to depart and the destination city and purchase airline service for Virgin America and fill form to purchase flight ticket [INFO] 2026-13-08 20:53:00
-Starting test execution initialization... [INFO] 2026-13-08 20:53:00
-Test completed with status: PASSED at steTest completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-13-08 20:53:03
+tests/live/regression/edge_case_tests/formPurchaseFlights.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:15
+tests/live/regression/edge_case_tests/formPurchaseFlights.spec.js: Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-14-08 13:35:17
+tests/live/regression/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:18
+tests/live/regression/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-14-08 13:35:20
+tests/live/sanity/edge_case_tests/formPurchaseFlights.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:20
+tests/live/sanity/edge_case_tests/formPurchaseFlights.spec.js: Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form with special characters. Should display error prompt message. [INFO] 2026-14-08 13:35:23
+tests/live/sanity/menu_departure_destination_city.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:24
+tests/live/sanity/menu_departure_destination_city.spec.js: Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-14-08 13:35:25
+tests/live/smoke/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:25
+tests/live/smoke/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-14-08 13:35:27
+tests/live/smoke/menu_departure_destination_city.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:28
+tests/live/smoke/menu_departure_destination_city.spec.js: Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-14-08 13:35:29
+tests/production/mock_api_tests/api_test.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:29
+tests/production/mock_api_tests/api_test.spec.js: Start mocking API requests for the third test case... [INFO] 2026-14-08 13:35:29
+tests/production/mock_api_tests/api_test.spec.js: Start assertions... [INFO] 2026-14-08 13:35:30
+tests/production/mock_api_tests/api_test.spec.js: Test complete with status: PASSED at step: Mock API request to find the name Are Lingus, flight number, and the time for departure and arrival in the menu [INFO] 2026-14-08 13:35:30
+tests/production/regression/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:31
+tests/production/regression/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-14-08 13:35:32
+tests/production/regression/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:34
+tests/production/regression/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-14-08 13:35:35
+tests/production/sanity/edge_case_tests/login.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:36
+tests/production/sanity/edge_case_tests/login.spec.js: Test complete with status: PASSED at step: Enter random text into textfield for email address and password field. Should displlay an error prompt message [INFO] 2026-14-08 13:35:38
+tests/production/sanity/flight_purchasse_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:39
+tests/production/sanity/flight_purchasse_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-14-08 13:35:40
+tests/production/smoke/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:41
+tests/production/smoke/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-14-08 13:35:43
+tests/production/smoke/menu_departure_destination_city.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:44
+tests/production/smoke/menu_departure_destination_city.spec.js: Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-14-08 13:35:45
+tests/quality_assurance/mock_api_tests/api_test.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:45
+tests/quality_assurance/mock_api_tests/api_test.spec.js: Start mocking API requests for the third test case... [INFO] 2026-14-08 13:35:46
+tests/quality_assurance/mock_api_tests/api_test.spec.js: Start assertions... [INFO] 2026-14-08 13:35:47
+tests/quality_assurance/mock_api_tests/api_test.spec.js: Test complete with status: PASSED at step: Mock API request to find the name Are Lingus, flight number, and the time for departure and arrival in the menu [INFO] 2026-14-08 13:35:47
+tests/quality_assurance/regression/flight_purchase_verification.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:47
+tests/quality_assurance/regression/flight_purchase_verification.spec.js: Test complete with status: PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-14-08 13:35:49
+tests/quality_assurance/regression/formPurchaseFlights.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:50
+tests/quality_assurance/regression/formPurchaseFlights.spec.js: Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form to purchase flight ticket [INFO] 2026-14-08 13:35:53
+tests/quality_assurance/sanity/edge_case_tests/register.spec.js: Start test execution initialization... [INFO] 2026-14-08 13:35:53
+tests/quality_assurance/sanity/edge_case_tests/register.spec.js: Test complete with status: PASSED at step: Submit registration form with special characters. Should display an error prompt message. [INFO] 2026-14-08 13:35:55
+tests/quality_assurance/sanity/login.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:56
+tests/quality_assurance/sanity/login.spec.js: Test is complete with status: PASSED at step: Go to login website and enter login credentials [INFO] 2026-14-08 13:35:57
+tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:59
+tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Test completed with status:  PASSED at step: Select city for departure and for destination to get flight information [INFO] 2026-14-08 13:35:59
+tests/quality_assurance/smoke/login.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:36:00
+tests/quality_assurance/smoke/login.spec.js: Test is complete with status: PASSED at step: Go to login website and enter login credentials [INFO] 2026-14-08 13:36:02
+menu_departure_destination_city.spec.js: Starting test executiontests/quality_assurance/sanity/flight_purchase_tests/qualitytests/quality_assurance/sanity/formPurchaseFlights.spec.js: Test complete with status: PASSED at step: Select city to depart and the destination city and purchase airline service for Virgin America and fill form to purchase flight ticket [INFO] 2026-14-08 13:35:58
+tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Starting test execution initialization... [INFO] 2026-14-08 13:35:59
+tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Test completed with status:  PASSED at step: Select city for departure and destination to make a purchase for United Airlines [INFO] 2026-14-08 13:36:00
+tests/tests/quality_assurance/smoke/formPurchaseFlights.spec.js: Test complete with status: PASSED at step: Select city to depart and thtests/quality_assurance/smoke/menu_departure_destination_city.js: Test completed with status: PASSED at step: Select Philadelphia for departure and Rome for destination [INFO] 2026-14-08 13:36:02
+026-14-08 13:36:00
+tests/quality_assurance/smoke/menu_departure_destination_city.js: Test completed with status: PASSED at step: Select Paris for departure and Buenos Aires for destination [INFO] 2026-14-08 13:36:01
+tests/quality_assurance/smoke/register.js: Start test case initialization... [INFO] 2026-14-08 13:36:02
+tests/quality_assurance/smoke/register.js: Go to BlazeDemo.com/register website [INFO] 2026-14-08 13:36:02
+tests/quality_assurance/smoke/register.js: Verifying the url endpoint... [INFO] 2026-14-08 13:36:03
+tests/quality_assurance/smoke/register.js: Entering registration form... [INFO] 2026-14-08 13:36:03
+tests/quality_assurance/smoke/register.js: Clicking register button... [INFO] 2026-14-08 13:36:03
+tests/quality_assurance/smoke/register.js: Test complete with status: PASSED from step: Enter and submit registration form [INFO] 2026-14-08 13:36:03
