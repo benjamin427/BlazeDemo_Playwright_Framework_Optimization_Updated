@@ -18,17 +18,15 @@ Once you've completed your project setup, type "npx playwright test" so it will 
 
 Required tools for the framework:
 
-After you complete the installation and project setup, you will need these tools to support the test execution process; dotenv for the configuration file to use environment variables, 
-
-and Winston to install a logger configuration file.
+After you complete the installation and project setup, you will need these tools to support the test execution process; dotenv for the configuration file to use environment variables, and Winston to install a logger configuration file.
 
 Setting up script commands:
 
 In order to create custom script commands, you will need to go to the project.json file.
 
-Under the "script" section is where you can create the commands that you will use on your terminal. All of the commands are available for you to select which browser to use for test execution. To select a browser in Playwright, type the command "npm run test:chromium" to run the test execution using the chrome browser.
+Under the "script" section is where you can create the commands that you will use on your terminal. All of the commands are available for you to select which browser to use for test execution. To select a browser in Playwright, type the command "npm run chrome:test-suite:quality-assurance" to run the test execution of the entire quality assurance test suite using the chrome browser (do the same approach with other staging environments for production and live environments). You can select the firefox browser option to do the same script format (npm run firefox:test-suite:quality-assurance) 
 
-If you choose to use a Firefox browser or WebKit, type "npm run test:firefox_browser" or "npm run test:webkit_browser" to run the test execution using the Firefox browser or Playwright's generic version. Also, if you want to test all three browsers at once, type "npm run test:all_browsers".
+Also, you have an option to execute a test suite based on the type of testing procedure you're working on. For smoke test using the chrome browser in the QA environment type npm run chrome:test:quality-assurance:smoke. Do the same for sanity and regression testing (npm run chrome:test:quality-assurance:sanity, npm run chrome:test:quality-assurance:regression). Follow the similar script format if you're testing a suite for other staging environments for production and live using chrome and firefox browsers.  
 
 Generating reports:
 
