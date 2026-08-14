@@ -26,10 +26,11 @@ test('Submit registration form with special characters. Should display an error 
 
 test.afterEach(async({page}, testInfo) => {
     const register = new blazedemo_register(page)
-    await register.closeBrowser()
+    // Verify status of test execution
     if (testInfo.status === 'failed') {
         logger.error(`Test failed at step: "${testInfo.title}"`)
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
-    }   
+    }
+    await register.closeBrowser()   
 })
