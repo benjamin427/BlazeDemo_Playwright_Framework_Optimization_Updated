@@ -5,7 +5,7 @@ import logger from '../../../../utils/logger'
 test.beforeEach(async({page}) => {
     const start = new blazedemo_register(page)
     const referenceURL = process.env.BLAZEDEMO_REGISTER_URL_ENDPOINT
-    logger.info('Start test execution initialization...')
+    logger.info('tests/production/regression/edge_case_tests/register.spec.js: Start test execution initialization...')
     await start.visitWebsite()
     await expect(page).toHaveURL(referenceURL)
 })
@@ -28,9 +28,9 @@ test.afterEach(async({page}, testInfo) => {
     const register = new blazedemo_register(page)
     // Verify status of test execution
     if (testInfo.status === 'failed') {
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/production/regression/edge_case_tests/register.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/production/regression/edge_case_tests/register.spec.js: Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await register.closeBrowser()
 })
