@@ -5,7 +5,7 @@ import logger from '../../../utils/logger'
 
 test.beforeEach(async({page}) => {
     const departures = new blazedemo_menuSelectDeparture(page)
-    logger.info('Starting test execution initialization...')
+    logger.info('tests/live/smoke/menu_departure_destination_city.spec.js: Starting test execution initialization...')
     await departures.visitWebsite()
 })
 
@@ -32,9 +32,9 @@ test.afterEach(async({page}, testInfo) => {
     const destinations = new blazedemo_menuSelectDestination(page)
     // Very the status of test results
     if (testInfo.status === 'failed') {
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/live/smoke/menu_departure_destination_city.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test completed with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/live/smoke/menu_departure_destination_city.spec.js: Test completed with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await destinations.closeBrowser()
 })

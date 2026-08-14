@@ -2,14 +2,14 @@ import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 
 test.beforeEach(() => {
-    logger.info('Start test execution initialization...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start test execution initialization...')
 })
 
 // This mocks all request APIs.  It is used to intercept an API response and catch the network call in order to 
 // prevent all requests from reaching the actual server providing instant and controlled responses.
 
 test('Mock API request to find the name Virgin America, flight number, and time for departure and arrival in the menu', async({page}) => {
-    logger.info('Start mocking API requests...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start mocking API requests...')
 
     // Use a native regular expression literal in the url to intercept a API request
     await page.route("\\*\\/\*\\/reserve.php", async (route) => {
@@ -45,7 +45,7 @@ test('Mock API request to find the name Virgin America, flight number, and time 
     // Navigate to the website after mocking serveral API requests 
     await page.goto("https://blazedemo.com/reserve.php")
 
-    logger.info('Start assertions...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start assertions...')
 
     // Verify information used for mock data
     await expect(page.getByText('43').first()).toBeVisible()
@@ -56,7 +56,7 @@ test('Mock API request to find the name Virgin America, flight number, and time 
 })
 
 test('Mock API request to find the name United Airlines, flight number, and the time for departurre and arrival in the menu', async ({page}) => {
-    logger.info('Start mocking API test for the second test case...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start mocking API test for the second test case...')
 
     await page.route("\\*\\/\*\\/reserve.php", async (route) => {
         const json_response_flighhtNumber = [{name: '234'}]
@@ -86,7 +86,7 @@ test('Mock API request to find the name United Airlines, flight number, and the 
     // Navigate to the website after mocking several API requests
     await page.goto("https://blazedemo.com/reserve.php")
 
-    logger.info('Start assertions...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start assertions...')
 
     // Verify information used for mocked data
     await expect(page.getByText('234').first()).toBeVisible()
@@ -97,7 +97,7 @@ test('Mock API request to find the name United Airlines, flight number, and the 
 })
 
 test('Mock API request to find the name Are Lingus, flight number, and the time for departure and arrival in the menu', async({page}) => {
-    logger.info('Start mocking API requests for the third test case...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start mocking API requests for the third test case...')
 
     await page.route("\\*\\/\*\\/reserve.php", async (route) => {
         const json_response_flightNumber = [{name: '9696'}]
@@ -126,7 +126,7 @@ test('Mock API request to find the name Are Lingus, flight number, and the time 
 
     await page.goto("https://blazedemo.com/reserve.php")
 
-    logger.info('Start assertions...')
+    logger.info('tests/live/regression/mock_api_tests/api_test.spec.js: Start assertions...')
     await expect(page.getByText('9696')).toBeVisible()
     await expect(page.getByText('Aer Lingus')).toBeVisible()
     await expect(page.getByText('5:27 AM')).toBeVisible()
@@ -137,8 +137,8 @@ test('Mock API request to find the name Are Lingus, flight number, and the time 
 // Verify the status of test results
 test.afterEach(async({}, testInfo) => {
     if (testInfo.status === 'failed') {
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/live/regression/mock_api_tests/api_test.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/live/regression/mock_api_tests/api_test.spec.js: Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
 })
