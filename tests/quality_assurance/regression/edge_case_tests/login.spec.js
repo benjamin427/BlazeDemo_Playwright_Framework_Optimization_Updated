@@ -6,7 +6,7 @@ import logger from '../../../../utils/logger'
 test.beforeEach(async({page}) => {
     const login = new blazedemo_Login(page)
     const referenceURL = process.env.BLAZEDEMO_LOGIN_URL_ENDPOINT
-    logger.info('Start test execution initialization...')
+    logger.info('tests/quality_assurance/regression/edge_case_tests/login.spec.js: Start test execution initialization...')
     await login.visitWebsite()
     await expect(page).toHaveURL(referenceURL)
 })
@@ -23,9 +23,9 @@ test('Enter random text into textfield for email address and password field. Sho
 test.afterEach(async({page}, testInfo) => {
     const login = new blazedemo_Login(page)
     if (testInfo.status === 'failed') {
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/quality_assurance/regression/edge_case_tests/login.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/quality_assurance/regression/edge_case_tests/login.spec.js: Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await login.closeBrowser()
 })

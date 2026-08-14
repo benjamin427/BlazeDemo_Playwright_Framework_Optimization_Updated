@@ -5,7 +5,7 @@ import logger from '../../../../utils/logger'
 test.beforeEach(async({page}) => {
     const start = new blazedemo_register(page)
     const referenceURL = process.env.BLAZEDEMO_REGISTER_URL_ENDPOINT
-    logger.info('Start test execution initialization...')
+    logger.info('tests/quality_assurance/sanity/edge_case_tests/register.spec.js: Start test execution initialization...')
     await start.visitWebsite()
     await expect(page).toHaveURL(referenceURL)
 })
@@ -27,9 +27,9 @@ test('Submit registration form with special characters. Should display an error 
 test.afterEach(async({page}, testInfo) => {
     const register = new blazedemo_register(page)
     if (testInfo.status === 'failed'){
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/quality_assurance/sanity/edge_case_tests/register.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/quality_assurance/sanity/edge_case_tests/register.spec.js: Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await register.closeBrowser()
 })

@@ -6,7 +6,7 @@ import logger from '../../../utils/logger'
 
 test.beforeEach(async({page}) => {
     const visit = new blazedemo_menuSelectDeparture(page)
-    logger.info('Start test execution initialization...')
+    logger.info('tests/quality_assurance/regression/formPurchaseFlights.spec.js: Start test execution initialization...')
     await visit.visitWebsite()
 })
 
@@ -49,9 +49,9 @@ test('Select city to depart and the destination city and purchase airline servic
 test.afterEach(async({page}, testInfo) => {
     const close = new blazedemo_purchaseForm(page)
     if (testInfo.status === 'failed') {
-        logger.error(`Test failed at step: "${testInfo.title}"`)
+        logger.error(`tests/quality_assurance/regression/formPurchaseFlights.spec.js: Test failed at step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/quality_assurance/regression/formPurchaseFlights.spec.js: Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await close.closeBrowser()
 })

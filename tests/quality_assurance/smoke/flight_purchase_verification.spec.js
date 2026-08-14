@@ -7,7 +7,7 @@ import logger from '../../../utils/logger'
 test.beforeEach(async({page}) => {
     const departure = new blazedemo_menuSelectDeparture(page)
     await departure.visitWebsite()
-    logger.info('Starting test execution initialization...')
+    logger.info('tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Starting test execution initialization...')
 })
 
 test("Select city for departure and for destination to get flight information", async({page}) => {
@@ -46,9 +46,9 @@ test.afterEach(async({page}, testInfo) => {
     const destination = new blazedemo_menuSelectDestination(page)
     // Verify the status of test results
     if (testInfo.status === 'failed'){
-        logger.error(`Test has failed in step: "${testInfo.title}"`)
+        logger.error(`tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Test has failed in step: "${testInfo.title}"`)
     } else {
-        logger.info(`Test completed with status:  ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
+        logger.info(`tests/quality_assurance/smoke/flight_purchase_verification.spec.js: Test completed with status:  ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
     await destination.closeBrowser()
 })
