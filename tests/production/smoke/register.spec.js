@@ -30,4 +30,5 @@ test('Enter and submit registration form', async({page}, testInfo) => {
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} from step: ${testInfo.title}`)
     }
+    await register.closeBrowser()
 })

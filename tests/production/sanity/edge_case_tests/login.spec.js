@@ -21,10 +21,10 @@ test('Enter random text into textfield for email address and password field. Sho
 
 test.afterEach(async({page}, testInfo) => {
     const login = new blazedemo_Login(page)
-    await login.closeBrowser()
     if (testInfo.status === 'failed'){
         logger.error(`Test failed at step: "${testInfo.title}"`)
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
+    await login.closeBrowser()
 })

@@ -20,4 +20,5 @@ test('Go to login website and enter login credentials', async({page}, testInfo) 
     } else {
         logger.info(`Test is complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
+    await login.closeBrowser()
 })

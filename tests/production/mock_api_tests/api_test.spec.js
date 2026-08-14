@@ -5,6 +5,7 @@ test.beforeEach(() => {
     logger.info('Start test execution initialization...')
 })
 
+
 // This mocks all request APIs.  It is used to intercept an API response and catch the network call in order to 
 // prevent all requests from reaching the actual server providing instant and controlled responses.
 

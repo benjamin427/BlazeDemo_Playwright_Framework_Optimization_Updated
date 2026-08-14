@@ -13,14 +13,17 @@ test('Enter and submit registration form', async({page}, testInfo) => {
 
     logger.info('Start test case initialization...')
     logger.info('Go to BlazeDemo.com/register website')
+
     // Navigate to the website and verify the url endpoint
     await register.visitWebsite()
     logger.info('Verifying the url endpoint...')
     await expect(page).toHaveURL(referenceURL)
     logger.info('Entering registration form...')
+
     // Entering information for each text field 
     await register.enterRegisterForm(referenceName, referenceCompany, referenceEmailAddress, referenceEmailAddress, referrencePassword, referrencePassword)
     logger.info('Clicking register button...')
+
     // Click register button
     await register.clickRegisterButton()
     
@@ -30,4 +33,5 @@ test('Enter and submit registration form', async({page}, testInfo) => {
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} from step: ${testInfo.title}`)
     }
+    await register.closeBrowser()
 })

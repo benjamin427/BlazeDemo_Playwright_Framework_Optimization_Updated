@@ -36,26 +36,15 @@ test('Select city to depart and the destination city and purchase airline servic
     await purchaseVirginAmerica.enterPurchaseForm_CreditCardYear(purchaseFormSpecialCharacters)
     await purchaseVirginAmerica.enterPurchaseForm_NameOnCard(purchaseFormSpecialCharacters)
     await purchaseVirginAmerica.clickPurchaseFlight()
-    // await purchaseVirginAmerica.enterPurchaseForm_Name(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterPurchaseForm_Address(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterPurchaseForm_City(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterPurchaseForm_State(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterPurchaseForm_ZipCode(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.selectPurchaseForm_CardType_DinersClub()
-    // await purchaseVirginAmerica.enterCreditCardNumber(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterCreditCardMonth(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterCreditCardYear(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.enterCreditCardNameOnCard(purchaseFormSpecialCharacters)
-    // await purchaseVirginAmerica.clickRememberMeCheckbox()
 })
 
 test.afterEach(async({page},  testInfo) => {
     const close = new blazedemo_menuSelectDestination(page)
-    await close.closeBrowser()
     if (testInfo.status === 'failed') {
         logger.error(`Test failed at step: "${testInfo.title}"`)
     } else {
         logger.info(`Test complete with status: ${testInfo.status.toUpperCase()} at step: ${testInfo.title}`)
     }
+    await close.closeBrowser()
 })
 
