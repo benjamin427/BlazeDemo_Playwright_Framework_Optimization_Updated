@@ -4,27 +4,30 @@ on:
     push:
         branches: [main]
         paths:
-            - '/tests/live/mock_api_tests/**'
-            - '/tests/live/regression/**'
-            - '/tests/live/sanity/**'
+            - '/live/**'
+#            - '/tests/live/mock_api_tests/**'
+#            - '/tests/live/regression/**'
+#            - '/tests/live/sanity/**'
 
     pull_request:
         branches: [main]
         paths:
-            - '/tests/live/mock_api_tests/**'
-            - '/tests/live/regression/**'
-            - '/tests/live/sanity/**'
+            - '/live/**'
+#            - '/tests/live/mock_api_tests/**'
+#            - '/tests/live/regression/**'
+#            - '/tests/live/sanity/**'
 
 jobs:
     run_tests:
         runs-on: ubuntu
-        strategy:
-            matrix:
-                project-dir: [./tests/live/mock_api_tests/, ./tests/live/regression/, ./tests/live/sanity/]
+#        strategy:
+#            matrix:
+#                project-dir: [./tests/live/mock_api_tests/, ./tests/live/regression/, ./tests/live/sanity/]
         
         defaults:
             run:
-                working-directory: ${{matrix.project-dir}}
+#                working-directory: ${{matrix.project-dir}
+                 working-directory: './live'
         steps:
             - name: Checkout repository code
               uses: actions/checkout@v4
