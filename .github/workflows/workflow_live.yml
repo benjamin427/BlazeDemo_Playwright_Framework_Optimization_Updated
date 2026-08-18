@@ -2,7 +2,8 @@ name: Testing from live environment
 
 on:
     push:
-        branches: [main]
+        branches: 
+            - main
         paths:
             - '/live/**'
 #            - '/tests/live/mock_api_tests/**'
@@ -10,7 +11,8 @@ on:
 #            - '/tests/live/sanity/**'
 
     pull_request:
-        branches: [main]
+        branches: 
+            - main
         paths:
             - '/live/**'
 #            - '/tests/live/mock_api_tests/**'

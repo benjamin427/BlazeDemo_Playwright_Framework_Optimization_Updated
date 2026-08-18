@@ -2,14 +2,16 @@ name: Testing from quality assurance environment
 
 on:
     push:
-        branches: [main]
+        branches: 
+            - main
         paths:
             - 'quality_assurance/**'
 #            - '/tests/quality_assurance/mock_api_tests/**'
 #            - '/tests/quality_assurance/regression/**'
 #            - '/tests/quality_assurance/sanity/**'
     pull_request:
-        branches: [main]
+        branches: 
+            - main
         paths: 
             - 'quality_assurance/**'
 #            - '/tests/quality_assurance/mock_api_tests/**'

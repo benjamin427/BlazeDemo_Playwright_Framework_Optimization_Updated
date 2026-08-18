@@ -2,14 +2,16 @@ name: Testing from production environment
 
 on:
     push:
-        branches: [main]
+        branches: 
+            - main
         paths:
             - 'production/**'
 #            - '/tests/production/mock_api_tests/**'
 #            - '/test/production/regression/**'
 #            - '/test/production/sanity/**'
     pull_request:
-        branches: [main]
+        branches: 
+            - main
         paths:
             - 'production/**'
 #            - '/tests/production/mock_api_tests/**'
