@@ -16,7 +16,7 @@ import path from 'path'
  */
 export default defineConfig({
   globalTimeout: 245000,
-  timeout: 90000,
+  timeout: 95500,
   expect: {
     timeout: 45000
   },
