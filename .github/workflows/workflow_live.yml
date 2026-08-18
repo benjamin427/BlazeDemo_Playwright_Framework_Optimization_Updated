@@ -6,6 +6,7 @@ on:
             - main
         paths:
             - '/live/**'
+            - 'playwright.config.js'
 #            - '/tests/live/mock_api_tests/**'
 #            - '/tests/live/regression/**'
 #            - '/tests/live/sanity/**'
@@ -15,6 +16,7 @@ on:
             - main
         paths:
             - '/live/**'
+            - 'playwright.config.js'
 #            - '/tests/live/mock_api_tests/**'
 #            - '/tests/live/regression/**'
 #            - '/tests/live/sanity/**'

@@ -6,6 +6,7 @@ on:
             - main
         paths:
             - 'quality_assurance/**'
+            - 'playwright.config.js'
 #            - '/tests/quality_assurance/mock_api_tests/**'
 #            - '/tests/quality_assurance/regression/**'
 #            - '/tests/quality_assurance/sanity/**'
@@ -14,6 +15,7 @@ on:
             - main
         paths: 
             - 'quality_assurance/**'
+            - 'playwright.config.js'
 #            - '/tests/quality_assurance/mock_api_tests/**'
 #            - '/tests/quality_assurance/regression/**'
 #            - '/tests/quality_assurance/sanity/**'
