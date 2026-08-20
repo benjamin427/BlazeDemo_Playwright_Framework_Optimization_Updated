@@ -15,10 +15,10 @@ import path from 'path'
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  globalTimeout: 125000,
-  timeout: 65000,
+  globalTimeout: 60000,
+  timeout: 25000,
   expect: {
-    timeout: 75000
+    timeout: 35000
   },
   testDir: './tests',
   /* Run tests in files in parallel */
