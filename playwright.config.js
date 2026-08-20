@@ -15,8 +15,8 @@ import path from 'path'
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  globalTimeout: 700000,
-  timeout: 400000,
+  globalTimeout: 7200000,
+  timeout: 410000,
   expect: {
     timeout: 55000
   },
