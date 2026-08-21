@@ -1,44 +1,83 @@
 name: Testing from quality assurance environment
 
 on:
-    push:
-        branches: 
-            - main
-        paths:
-            - 'quality_assurance/**'
-            - 'playwright.config.js'
+    pull_request:
+        branches:
+            - 'main'
+
+jobs:
+    changes:
+        runs-on: ubuntu
+        outputs: 
+            playwright: ${{ steps.filter.outputs.playwright }}
+        steps:
+            - uses: actions/checkout@v4
+            - uses: dorny/paths-filter@v4
+              id: filter
+              with:
+                filters: |
+                    playwright:
+                        - '/quality_assurance/**'
+                        - 'playwright.config.js'
+    tests:
+        needs: changes
+        runs-on: ubuntu
+        steps:
+            - uses: actions/checkout@v4
+            - name: Install dependencies
+              if: needs.changes.outputs.playwright == 'true'
+              run: npm ci
+            
+            - name: Run Playwright tests
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test
+            
+            - name: No-op changes
+              if: needs.changes.outputs.playwright == 'false'
+              run: echo "No playwright changes detected"
+
+                
+
+
+#on:
+#    push:
+#        branches: 
+#            - main
+#        paths:
+#            - 'quality_assurance/**'
+#            - 'playwright.config.js'
 #            - '/tests/quality_assurance/mock_api_tests/**'
 #            - '/tests/quality_assurance/regression/**'
 #            - '/tests/quality_assurance/sanity/**'
-    pull_request:
-        branches: 
-            - main
-        paths: 
-            - 'quality_assurance/**'
-            - 'playwright.config.js'
+#    pull_request:
+#        branches: 
+#            - main
+#        paths: 
+#            - 'quality_assurance/**'
+#            - 'playwright.config.js'
 #            - '/tests/quality_assurance/mock_api_tests/**'
 #            - '/tests/quality_assurance/regression/**'
 #            - '/tests/quality_assurance/sanity/**'
 
-jobs:
-    run_tests:
-        runs-on: ubuntu
+#jobs:
+#    run_tests:
+#        runs-on: ubuntu
 #        strategy:
 #            matrix:
 #                project-dir: [./tests/quality_assurance/mock_api_tests/, ./tests/quality_assurance/regression/, ./tests/quality_assurance/sanity/]
-        defaults:
-            run:
+#        defaults:
+#            run:
 #                working-directory: ${{matrix.project-dir}
-                 working-directory: './quality_assurance'
-        steps:
-            - name: Checkout repository code
-              uses: actions/checkout@v4
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: '24'
+#                 working-directory: './quality_assurance'
+#        steps:
+#            - name: Checkout repository code
+#              uses: actions/checkout@v4
+#            - name: Setup Node.js
+#              uses: actions/setup-node@v4
+#              with:
+#                node-version: '24'
             
-            - name: Install dependencies
-              run: npm ci
-            - name: Execute specific-folder test
-              run: npm test
+#            - name: Install dependencies
+#              run: npm ci
+#            - name: Execute specific-folder test
+#              run: npm test

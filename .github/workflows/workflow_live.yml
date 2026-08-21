@@ -1,47 +1,86 @@
 name: Testing from live environment
 
-on:
-    push:
-        branches: 
-            - main
-        paths:
-            - '/live/**'
-            - 'playwright.config.js'
-#            - '/tests/live/mock_api_tests/**'
-#            - '/tests/live/regression/**'
-#            - '/tests/live/sanity/**'
-
+on: 
     pull_request:
-        branches: 
-            - main
-        paths:
-            - '/live/**'
-            - 'playwright.config.js'
-#            - '/tests/live/mock_api_tests/**'
-#            - '/tests/live/regression/**'
-#            - '/tests/live/sanity/**'
+        branches:
+            - 'main'
 
 jobs:
-    run_tests:
+    # Stage 1. Check what changed
+    changes:
         runs-on: ubuntu
+        outputs:
+            playwright: ${{steps.filter.outputs.playwright}}
+        steps:
+            - uses: actions/checkout@v4
+            - uses: dorny/paths-filter@v3
+              id: filter
+              with:
+                filters: |
+                    playwright:
+                        - '/live/**'
+                        - 'playwright.config.js'
+    
+    # Stage 2. Run tests conditionally
+    test:
+        needs: changes
+        # Always runs its block, but skips if no changes occured
+        runs-on: ubuntu
+        steps:
+            - uses: actions/checkout@v4
+            - name: Install dependencies
+              if: needs.changes.outputs.playwright == 'true'
+              run: npm ci
+
+            - name: Run Playwright tests
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test
+            # If no changes occur
+            - name: No-op Success
+              if: needs.changes.outputs.playwright == 'false'
+              run: echo "No playwright changes detected. Skipping test safely"
+#on:
+#    push:
+#        branches: 
+#            - main
+#        paths:
+#            - '/live/**'
+#            - 'playwright.config.js'
+#            - '/tests/live/mock_api_tests/**'
+#            - '/tests/live/regression/**'
+#            - '/tests/live/sanity/**'
+
+#    pull_request:
+#        branches: 
+#            - main
+#        paths:
+#            - '/live/**'
+#            - 'playwright.config.js'
+#            - '/tests/live/mock_api_tests/**'
+#            - '/tests/live/regression/**'
+#            - '/tests/live/sanity/**'
+
+#jobs:
+#    run_tests:
+#        runs-on: ubuntu
 #        strategy:
 #            matrix:
 #                project-dir: [./tests/live/mock_api_tests/, ./tests/live/regression/, ./tests/live/sanity/]
         
-        defaults:
-            run:
+#        defaults:
+#            run:
 #                working-directory: ${{matrix.project-dir}
-                 working-directory: './live'
-        steps:
-            - name: Checkout repository code
-              uses: actions/checkout@v4
-            - name: Setup node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: '24'
-            
-            - name: Install dependencies
-              run: npm ci
-            - name: Execute specific-folder tests
-              run: npm test
+#                 working-directory: './live'
+#        steps:
+#            - name: Checkout repository code
+#              uses: actions/checkout@v4
+#            - name: Setup node.js
+#              uses: actions/setup-node@v4
+#              with:
+#                node-version: '24'
+#            
+#            - name: Install dependencies
+#              run: npm ci
+#            - name: Execute specific-folder tests
+#              run: npm test
 
