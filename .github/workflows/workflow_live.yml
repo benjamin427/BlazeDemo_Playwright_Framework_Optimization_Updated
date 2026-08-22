@@ -3,8 +3,7 @@ name: Testing from live environment
 
 on: 
     pull_request:
-        branches:
-            - 'main'
+        branches: [main]
 
 jobs:
     # Stage 1. Check what changed
