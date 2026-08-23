@@ -39,9 +39,22 @@ jobs:
               if: needs.changes.outputs.playwright == 'true'
               run: npm ci
 
-            - name: Run Playwright tests
+            - name: Run Playwright test suite for live environment
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test
+              run: npx playwright test tests/live
+            
+            - name: Run Playwright test for mock apis in live environment
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/live/mock_api_tests/api_test.spec.js
+            
+            - name: Run Playwright sanity test suite in live environment
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/live/sanity
+
+            - name: Run Playwright regression test suite in live environment
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/live/regression
+              
             # If no changes occur
             - name: No-op Success
               if: needs.changes.outputs.playwright == 'false'
