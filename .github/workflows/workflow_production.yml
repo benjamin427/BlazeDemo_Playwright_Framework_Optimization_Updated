@@ -12,7 +12,7 @@ jobs:
             playwright: ${{ steps.filter.outputs.playwright }}
         steps:
             - uses: actions/checkout@v4
-            - uses: dorny/paths-filter@v4
+            - uses: dorny/paths-filter@v3
               id: filter
               with:
                 filters: |
