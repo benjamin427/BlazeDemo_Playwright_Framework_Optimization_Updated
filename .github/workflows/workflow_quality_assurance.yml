@@ -20,11 +20,12 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - 'quality_assurance/mock_api_tests/**'
-                        - 'quality_assurance/regression/**'
-                        - 'quality_assurance/sanity/**'
-                        - 'quality_assurance/smoke/**'
+                        - 'quality_assurance/**'
                         - 'playwright.config.js'
+#                        - 'quality_assurance/mock_api_tests/**'
+#                        - 'quality_assurance/regression/**'
+#                        - 'quality_assurance/sanity/**'
+#                        - 'quality_assurance/smoke/**'
     tests:
         needs: changes
         runs-on: ubuntu-latest
