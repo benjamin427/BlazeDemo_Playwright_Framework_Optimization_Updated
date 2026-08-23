@@ -17,7 +17,7 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - '/production/**'
+                        - 'production/**'
                         - 'playwright.config.js'
     
     test:

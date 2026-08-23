@@ -18,7 +18,7 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - '/live/**'
+                        - 'live/**'
                         - 'playwright.config.js'
     
     # Stage 2. Run tests conditionally
