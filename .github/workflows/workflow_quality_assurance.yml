@@ -2,6 +2,9 @@ name: Testing from quality assurance environment
 
 
 on:
+    push:
+        branches: [main]
+        
     pull_request:
         branches: [main]
 
