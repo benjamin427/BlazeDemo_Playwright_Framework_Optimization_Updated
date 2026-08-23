@@ -17,7 +17,10 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - 'quality_assurance/**'
+                        - 'quality_assurance/mock_api_tests/**'
+                        - 'quality_assurance/regression/**'
+                        - 'quality_assurance/sanity/**'
+                        - 'quality_assurance/smoke/**'
                         - 'playwright.config.js'
     tests:
         needs: changes
