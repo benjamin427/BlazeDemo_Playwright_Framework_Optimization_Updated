@@ -36,22 +36,50 @@ jobs:
             - name: Install dependencies
               if: needs.changes.outputs.playwright == 'true'
               run: npm ci
-            
-            - name: Run Playwright test suite for production environment
-              if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/production
 
-            - name: Run Playwright test for mock apis in production environment
+            - name: Run Playwright tests in production environment for testing mock apis
               if: needs.changes.outputs.playwright == 'true'
               run: npx playwright test tests/production/mock_api_tests/api_test.spec.js
             
-            - name: Run Playwright sanity test suite in production environment
+            - name: Run Playwright tests in production environment to test edge case test cases in sanity test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/production/sanity
+              run: npx playwright test tests/production/regression/edge_case_tests
+            
+            - name: Run Playwright tests in production environment for testing flight purchase verification in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/regression/flight_purchase_verification.spec.js
+            
+            - name: Run Playwright tests in production environment for testing login application in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/regression/login.spec.js
 
-            - name: Run Playwright regression test suite in production environment
+            - name: Run Playwright tests in production environment for testing departure and destination menu for each city in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/production/regression
+              run: npx playwright test tests/production/regression/menu_departure_destination_city.spec.js
+              
+            - name: Run Playwright tests in production environment for testing register form in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/regression/register.spec.js
+            
+            - name: Run Playwright tests in production environment to test edge case test cases in sanity test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/sanity/edge_case_tests
+
+            - name: Run Playwright tests in production environment for testing flight purchase verification in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/sanity/flight_purchase_verification.spec.js
+            
+            - name: Run Playwright tests in production environment for testing login application in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/sanity/login.spec.js
+
+            - name: Run Playwright tests in production environment for testing departure and destination menu for each city in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/sanity/menu_departure_destination_city.spec.js
+              
+            - name: Run Playwright tests in production environment for testing register form in regression test suite
+              if: needs.changes.outputs.playwright == 'true'
+              run: npx playwright test tests/production/sanity/register.spec.js
 
             - name: No-op success
               if: needs.changes.outputs.playwright == 'false'
