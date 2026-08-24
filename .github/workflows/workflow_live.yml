@@ -20,7 +20,11 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - 'live/**'
+                        - 'live/edge_case_tests/**'
+                        - 'live/mock_api_tests/**'
+                        - 'live/regression/**'
+                        - 'live/sanity/**'
+                        - 'live/smoke/**'
                         - 'playwright.config.js'
 #                        - 'live/mock_api_tests/**'
 #                        - 'live/regression/**'
@@ -82,7 +86,7 @@ jobs:
             - name: Run Playwright tests in live environment for testing register form in regression test suite
               if: needs.changes.outputs.playwright == 'true'
               run: npx playwright test tests/live/sanity/register.spec.js
-              
+
             # If no changes occur
             - name: No-op Success
               if: needs.changes.outputs.playwright == 'false'
