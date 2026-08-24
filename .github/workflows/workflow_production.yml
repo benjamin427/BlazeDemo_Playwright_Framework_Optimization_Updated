@@ -20,11 +20,7 @@ jobs:
               with:
                 filters: |
                     playwright:
-                        - 'production/edge_case_tests/**'
-                        - 'production/mock_api_tests/**'
-                        - 'production/regression/**'
-                        - 'production/sanity/**'
-                        - 'production/smoke/**'
+                        - 'production/**'
                         - 'playwright.config.js'
 #                        - 'production/mock_api_tests/**'
 #                        - 'production/regression/**'
