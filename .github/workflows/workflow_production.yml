@@ -34,7 +34,6 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Install dependencies
-              if: needs.changes.outputs.playwright == 'true'
               run: npm ci
 
             - name: Run Playwright tests in production environment for testing mock apis
