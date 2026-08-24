@@ -4,6 +4,7 @@ import {blazedemo_menuSelectDeparture, blazedemo_menuSelectDestination } from '.
 import {test, expect} from '@playwright/test'
 import logger from '../../../../utils/logger'
 
+
 test.beforeEach(async({page}) => {
     const visit = new blazedemo_menuSelectDeparture(page)
     logger.info('tests/quality_assurance/regression/edge_case_tests/formPurchaseFlights.spec.js: Start test execution initialization...')
