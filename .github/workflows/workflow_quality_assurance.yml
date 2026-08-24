@@ -38,55 +38,55 @@ jobs:
 
             - name: Run Playwright test for mock api test cases in quality assurance environment
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Mock_Api_Tests/api_test.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Mock_Api_Tests/Api_Test.spec.js --testMatch="**/*.js"
           
             - name: Run Playwright edge case regression testing for quality assurance environment
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwrighty test tests/Quality_Assurance/Regression/edge_case_tests --testMatch="**/*.js"  
+              run: npx playwrighty test tests/Quality_Assurance/Regression/Edge_Case_Tests --testMatch="**/*.js"  
 
             - name: Run Playwright regression tests for flight purchase verification
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Regression/flight_purchase_verification.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Regression/Flight_Purchase_Verification.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright regression tests for a form used for flight purchases
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Regression/formPaurchaseFlights.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Regression/FormPurchaseFlights.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright regression tests for login form
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Regression/login.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Regression/Login.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright regression tests for departure destination menus for each city
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Regression/menu_departure_destination_city.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Regression/Menu_Departure_Destination_City.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright regression tests for register form
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Regression/register.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Regression/Register.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright edge case sanity testing for quality assurance environment
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/edge_case_tests --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/Edge_Case_Tests --testMatch="**/*.js"
 
             - name: Run Playwright to test flight purchase verification inside sanity test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/flight_purchase_verification.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/Flight_Purchase_Verification.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright to test form for flight purchases inside sanity testing suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/formPurchaseFlights.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/FormPurchaseFlights.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright to test login inside sanity testing suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/login.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/Login.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright to test the menu for departures and destinations
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/menu_departure_destination_city.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/Menu_Departure_Destination_City.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright to test the registration inside sanity testing suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Sanity/register.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Quality_Assurance/Sanity/Register.spec.js --testMatch="**/*.js"
 
             - name: No-op changes
               if: needs.changes.outputs.playwright == 'false'

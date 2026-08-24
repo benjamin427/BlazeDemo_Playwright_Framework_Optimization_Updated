@@ -40,47 +40,47 @@ jobs:
 
             - name: Run Playwright tests in live environment for testing mock apis
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Mock_Api_Tests/api_test.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Mock_Api_Tests/Api_Test.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright tests in live environment to test edge case test cases in sanity test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Regressionedge_case_tests --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Regression/Edge_Case_Tests --testMatch="**/*.js"
             
             - name: Run Playwright tests in live environment for testing flight purchase verification in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Regressionflight_purchase_verification.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Regression/Flight_Purchase_Verification.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright tests in live environment for testing login application in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Regressionlogin.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Regression/Login.spec.js --testMatch="**/*.js"
  
             - name: Run Playwright tests in live environment for testing departure and destination menu for each city in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Regressionmenu_departure_destination_city.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Regression/Menu_Departure_Destination_City.spec.js --testMatch="**/*.js"
               
             - name: Run Playwright tests in live environment for testing register form in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Regression/register.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Regression/Register.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright tests in live environment to test edge case test cases in sanity test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Sanity/edge_case_tests --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Sanity/Edge_Case_Tests --testMatch="**/*.js"
 
             - name: Run Playwright tests in live environment for testing flight purchase verification in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Sanity/flight_purchase_verification.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Sanity/Flight_Purchase_Verification.spec.js --testMatch="**/*.js"
             
             - name: Run Playwright tests in live environment for testing login application in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Sanity/login.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Sanity/Login.spec.js --testMatch="**/*.js"
 
             - name: Run Playwright tests in live environment for testing departure and destination menu for each city in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Sanity/menu_departure_destination_city.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Sanity/Menu_Departure_Destination_City.spec.js --testMatch="**/*.js"
               
             - name: Run Playwright tests in live environment for testing register form in regression test suite
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Live/Sanity/register.spec.js --testMatch="**/*.js"
+              run: npx playwright test tests/Live/Sanity/Register.spec.js --testMatch="**/*.js"
 
             # If no changes occur
             - name: No-op Success
