@@ -15,7 +15,7 @@ jobs:
             playwright: ${{ steps.filter.outputs.playwright }}
         steps:
             - uses: actions/checkout@v4
-            - uses: dorny/paths-filter@v3
+            - uses: dorny/paths-filter@v4
               id: filter
               with:
                 filters: |
@@ -41,7 +41,7 @@ jobs:
 
             - name: Run Playwright test for mock api test cases in quality assurance environment
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test tests/Quality_Assurance/Mock_Api_Tests/**
+              run: npx playwright test tests/quality_assurance/mock_api_tests/**
 #              run: npx playwright test tests/Quality_Assurance/Mock_Api_Tests/Api_Test.spec.js --test-match="*Api_Test.spec.js"
           
 #            - name: Run Playwright edge case regression testing for quality assurance environment
