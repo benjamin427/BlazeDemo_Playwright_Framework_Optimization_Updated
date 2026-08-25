@@ -109,5 +109,7 @@ dotenv.config({
 dotenv.config({
   path: path.resolve(__dirname, `.env.${process.env.NODE_ENV ?? 'formPurchaseFlightLufthansa'}`)
 })
-
+module.exports = {
+  testDir: process.env.PLAYWRIGHT_TEST_DIR || './tests'
+}
 
