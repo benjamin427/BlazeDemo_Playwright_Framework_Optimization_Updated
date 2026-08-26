@@ -43,7 +43,7 @@ jobs:
 #              env:
 #                PLAYWRIGHT_TEST_DIR: ${{github.workspace}}/tests/quality_assurance/mock_api_tests/
               if: needs.changes.outputs.playwright == 'true'
-              run: npx playwright test -- --dir=tests/quality_assurance/mock_api_tests
+              run: npm test -- --dir=tests/quality_assurance/mock_api_tests
 #              run: npx playwright test quality_assurance/mock_api_tests --config=playwright.config.js
 #              run: npx playwright test tests/Quality_Assurance/Mock_Api_Tests/Api_Test.spec.js --test-match="*Api_Test.spec.js"
           
