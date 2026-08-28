@@ -20,7 +20,7 @@ jobs:
               with:
                 filters: |
                     playwright:
-                         - 'quality_assurance/mock_api_tests/**'
+                         - '/tests/quality_assurance/mock_api_tests/**'
                          - 'playwright.config'
 #                        - 'quality_assurance/edge_case_tests/**'
 #                        - 'quality_assurance/mock_api_tests/**'
