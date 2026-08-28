@@ -1,6 +1,7 @@
 import {test, expect} from '@playwright/test'
 import logger from '../../../utils/logger'
 
+
 test.beforeEach(() => {
     logger.info('tests/quality_assurance/mock_api_tests/api_test.spec.js: Start test execution initialization...')
 })
