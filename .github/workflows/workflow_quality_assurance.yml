@@ -33,9 +33,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                node-version: 20
 
             - name: Install dependencies
               run: npm ci
@@ -44,8 +41,6 @@ jobs:
               run: npx playwright install --with-deps
 
             - name: Run Playwright test for mock api test cases in quality assurance environment
-#              env:
-#                PLAYWRIGHT_TEST_DIR: ${{github.workspace}}/tests/quality_assurance/mock_api_tests/
               if: needs.detect-changes.outputs.playwright == 'true'
               run: npx playwright test tests/quality_assurance/mock_api_tests/
 #              run: npm test -- --dir=tests/quality_assurance/mock_api_tests
@@ -101,7 +96,7 @@ jobs:
 #              run: npx playwright test tests/Quality_Assurance/Sanity/Register.spec.js --test-match="*Register.spec.js"
 
             - name: No-op changes
-              if: needs.changes.outputs.playwright == 'false'
+              if: needs.detect-changes.outputs.playwright == 'false'
               run: echo "No playwright changes detected"
 
                 
