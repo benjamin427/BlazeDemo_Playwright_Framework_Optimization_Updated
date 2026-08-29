@@ -41,7 +41,7 @@ jobs:
 
             - name: Run Playwright test for mock api test cases in quality assurance environment
               if: needs.detect-changes.outputs.playwright == 'true'
-              run: npx playwright test quality_assurance/mock_api_tests/
+              run: npx playwright test tests/quality_assurance/mock_api_tests/
 
             - name: Run Playwright edge case regression testing for quality assurance environment
               if: needs.detect-changes.outputs.playwright == 'true'
