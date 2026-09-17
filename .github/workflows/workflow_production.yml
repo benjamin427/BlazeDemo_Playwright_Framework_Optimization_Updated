@@ -22,10 +22,10 @@ jobs:
                     playwright:
                         - 'production/**'
                         - 'playwright.config.js'
-#                        - 'production/mock_api_tests/**'
-#                        - 'production/regression/**'
-#                        - 'production/sanity/**'
-#                        - 'production/smoke/**'
+                        - 'production/mock_api_tests/**'
+                        - 'production/regression/**'
+                        - 'production/sanity/**'
+                        - 'production/smoke/**'
                         
     
     test:
@@ -84,49 +84,4 @@ jobs:
               if: needs.changes.outputs.playwright == 'false'
               run: echo "No playwright changes detected"
 
-
-#on:
-#    push:
-#        branches: 
-#            - main
-#        paths:
-#            - 'production/**'
-#            - 'playwright.config.js'
-#            - '/tests/production/mock_api_tests/**'
-#            - '/test/production/regression/**'
-#            - '/test/production/sanity/**'
-#    pull_request:
-#        branches: 
-#            - main
-#        paths:
-#            - 'production/**'
-#            - 'playwright.config.js'
-#            - '/tests/production/mock_api_tests/**'
-#            - '/tests/production/regression/**'
-#            - '/tests/production/sanity/**'
-
-#jobs:
-#    run_tests:
-#        runs-on: ubuntu
-#        strategy:
-#            matrix:
-#                project-dir: [./tests/production/mock_api_tests/, ./tests/production/regression/, ./tests/production/sanity/]
-#        defaults:
-#            run:
-#                working-directory: ${{matrix.project-dir}
-#                 working-directory: './production'
-#        steps:
-#            - name: Checkout repository code
-#              uses: actions/checkout@v4
-#            - name: Setup Node.js
-#              uses: actions/setup-node@v4
-#              with:
-#                node-version: '24'
-            
-#            - name: Install dependencies
-#              run: npm ci
-#            - name: Execute specific-folder tests
-#              run: npm test
-              
-        
 
